@@ -1,16 +1,18 @@
+package CollectionFramework;
+
 import java.util.*;
 
 public class Question3 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner input=new Scanner(System.in);
         Map<String,Integer> countries=new HashMap();
         System.out.println("Enter the size of Map: ");
-        int size=sc.nextInt();
+        int size=input.nextInt();
         while(size-->0){
             System.out.println("Enter the country name: ");
-            String country=sc.next();
+            String country=input.next();
             System.out.println("Now, enter the country code: ");
-            int code=sc.nextInt();
+            int code=input.nextInt();
             countries.put(country,code);
         }
         for(String country:countries.keySet()) System.out.println(country+" has the country code "+countries.get(country));

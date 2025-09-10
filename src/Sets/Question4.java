@@ -1,8 +1,10 @@
+package Sets;
+
 import java.util.*;
 
-public class Question11 {
+public class Question4 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner input=new Scanner(System.in);
 
         Set<Integer> hashSet=new HashSet<>();
         Set<Integer> treeSet=new TreeSet<>();

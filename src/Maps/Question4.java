@@ -1,8 +1,10 @@
+package Maps;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Question15 {
+public class Question4 {
     public static void main(String[] args) {
         Map<Integer,Integer> hashMap=new HashMap<>();
         Map<Integer,Integer> treeMap=new TreeMap<>();

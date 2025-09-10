@@ -1,18 +1,20 @@
+package Maps;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Question12 extends FileNotFoundException {
+public class Question1 extends FileNotFoundException {
     public static void main(String[] args) {
         try{
             File file=new File("src/questions.txt");
 
-            Scanner sc=new Scanner(file);
+            Scanner input=new Scanner(file);
             Map<String,Integer> frequency=new HashMap<>();
-            while(sc.hasNext()){
-                String word=sc.next().toLowerCase();
+            while(input.hasNext()){
+                String word=input.next().toLowerCase();
                 if(frequency.containsKey(word)){
                     frequency.put(word,frequency.get(word)+1);
                 }

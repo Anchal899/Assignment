@@ -1,6 +1,8 @@
+package Iterators_Comparators;
+
 import java.util.*;
 
-public class Question18 {
+public class Question3 {
     public static void main(String[] args) {
         List<Employee> employees = Arrays.asList(
                 new Employee("Alice", "HR", 50000),

@@ -1,17 +1,19 @@
+package CollectionFramework;
+
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Question4 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner input=new Scanner(System.in);
         Set<String> books=new TreeSet<>();
 
         System.out.println("Enter the number of books you want to add: ");
-        int size=sc.nextInt();
+        int size=input.nextInt();
         while(size-->0){
             System.out.println("Enter the book name: ");
-            String book=sc.next();
+            String book=input.next();
 
             books.add(book);
         }

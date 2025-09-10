@@ -1,8 +1,10 @@
+package Sets;
+
 import java.util.*;
 
-public class Question9 {
+public class Question2 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner input=new Scanner(System.in);
         ArrayList<String> al=new ArrayList<>();
         al.add("anchal");
         al.add("khushi");

@@ -1,37 +1,38 @@
-import java.util.LinkedList;
-class Node {
-    String data;
-    Node next;
+package Lists;
 
-    Node(String data) {
+class ListNode {
+    String data;
+    ListNode next;
+
+    ListNode(String data) {
         this.data = data;
         this.next = null;
     }
 }
 
-public class Question5 {
+public class Question2 {
 
-    public Node addIntheFront(String movie, Node head) {
-        Node newNode = new Node(movie);
-        newNode.next = head;
-        return newNode;
+    public ListNode addIntheFront(String movie, ListNode head) {
+        ListNode newListNode = new ListNode(movie);
+        newListNode.next = head;
+        return newListNode;
     }
 
-    public Node addAtTheLast(String movie, Node head) {
-        Node newNode = new Node(movie);
+    public ListNode addAtTheLast(String movie, ListNode head) {
+        ListNode newListNode = new ListNode(movie);
         if (head == null) {
-            return newNode;
+            return newListNode;
         }
 
-        Node curr = head;
+        ListNode curr = head;
         while (curr.next != null) {
             curr = curr.next;
         }
-        curr.next = newNode;
+        curr.next = newListNode;
         return head;
     }
 
-    public Node removeNodeByTitle(String movieTitle, Node head) {
+    public ListNode removeListNodeByTitle(String movieTitle, ListNode head) {
         if (head == null) return null;
 
         // If head needs to be removed
@@ -39,7 +40,7 @@ public class Question5 {
             return head.next;
         }
 
-        Node curr = head;
+        ListNode curr = head;
         while (curr.next != null) {
             if (curr.next.data.equals(movieTitle)) {
                 curr.next = curr.next.next;
@@ -52,14 +53,29 @@ public class Question5 {
         System.out.println("Movie \"" + movieTitle + "\" not found in the list.");
         return head;
     }
+    public ListNode reverse(ListNode head){
+        ListNode curr=head;
+        ListNode prev=null;
+        ListNode next=null;
 
-    public void display(Node head) {
+        while(curr!=null){
+
+            next=curr.next;
+            curr.next=prev;
+
+            prev=curr;
+            curr=next;
+        }
+        return prev;
+    }
+
+    public void display(ListNode head) {
         if (head == null) {
             System.out.println("The list is empty");
             return;
         }
 
-        Node curr = head;
+        ListNode curr = head;
         while (curr != null) {
             System.out.println(curr.data);
             curr = curr.next;
@@ -67,8 +83,8 @@ public class Question5 {
     }
 
     public static void main(String[] args) {
-        Question5 movies = new Question5();
-        Node movie = null;
+        Question2 movies = new Question2();
+        ListNode movie = null;
 
         // Add to front
         movie = movies.addIntheFront("movie1", movie);
@@ -88,12 +104,14 @@ public class Question5 {
         System.out.println("\nAfter adding more:");
         movies.display(movie);
 
-        // Remove nodes
-        movie = movies.removeNodeByTitle("movie2", movie);     // Should be removed
-        movie = movies.removeNodeByTitle("movie10", movie);    // Not in list
+        // Remove ListNodes
+        movie = movies.removeListNodeByTitle("movie2", movie);     // Should be removed
+        movie = movies.removeListNodeByTitle("movie10", movie);    // Not in list
 
         System.out.println("\nAfter removals:");
         movies.display(movie);
-
+        movie=movies.reverse(movie);
+        System.out.println("After reversal: ");
+        movies.display(movie);
     }
 }

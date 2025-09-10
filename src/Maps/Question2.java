@@ -1,8 +1,10 @@
+package Maps;
+
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class Question13 {
+public class Question2 {
     public static Map<String,Long> contacts= new TreeMap<>();
     public static void addToMap(String name, Long number) {
         contacts.put(name, number);
@@ -26,7 +28,7 @@ public class Question13 {
         }
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         int choice=0;
 
         do {
@@ -35,25 +37,25 @@ public class Question13 {
             System.out.println("3. Search Contact");
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
-            choice = sc.nextInt();
-            sc.nextLine();
+            choice = input.nextInt();
+            input.nextLine();
 
             switch (choice) {
                 case 1:
                     System.out.print("Enter name: ");
-                    String nameAdd = sc.nextLine();
+                    String nameAdd = input.nextLine();
                     System.out.print("Enter number: ");
-                    Long numberAdd = sc.nextLong();
+                    Long numberAdd = input.nextLong();
                     addToMap(nameAdd, numberAdd);
                     break;
                 case 2:
                     System.out.print("Enter name to remove: ");
-                    String nameRemove = sc.nextLine();
+                    String nameRemove = input.nextLine();
                     removeFromMap(nameRemove);
                     break;
                 case 3:
                     System.out.print("Enter name to search: ");
-                    String nameSearch = sc.nextLine();
+                    String nameSearch = input.nextLine();
                     search(nameSearch);
                     break;
                 case 4:
@@ -65,7 +67,7 @@ public class Question13 {
 
         } while (choice != 4);
 
-        sc.close();
+        input.close();
     }
 
 

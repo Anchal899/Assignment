@@ -1,9 +1,11 @@
+package Lists;
+
 import java.util.LinkedList;
 import java.util.*;
 
-public class Question7 {
+public class Question3 {
     private static Queue<Integer> queue;
-    public Question7() {
+    public Question3() {
         queue = new LinkedList<>();
     }
     public void enqueue(int number){
@@ -32,7 +34,7 @@ public class Question7 {
     }
 
     public static void main(String[] args) {
-        Question7 myQueue = new Question7();
+        Question3 myQueue = new Question3();
 
         myQueue.enqueue(10);
         myQueue.enqueue(20);
