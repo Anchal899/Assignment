@@ -1,4 +1,4 @@
-package CollectionFramework;
+package Collections;
 
 import java.util.HashSet;
 import java.util.Scanner;
